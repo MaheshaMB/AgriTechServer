@@ -1,0 +1,31 @@
+<Context antiJARLocking="false" path="/WebContent" reloadable="true">
+
+<Resource name="jdbc/ATModule" 
+				auth="Container"
+				type="javax.sql.DataSource"
+				factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+	            testWhileIdle="true"
+				testOnBorrow="true"
+				testOnReturn="false"
+				validationQuery="SELECT 1"
+				validationInterval="30000"
+				timeBetweenEvictionRunsMillis="30000"
+				maxActive="20"
+				minIdle="3"
+				maxIdle="6"
+				maxWait="3000"
+				initialSize="3"
+				removeAbandonedTimeout="60"
+				removeAbandoned="true"
+				logAbandoned="true"
+				minEvictableIdleTimeMillis="30000"
+				jmxEnabled="true"
+				jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+								  org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+								  org.apache.tomcat.jdbc.pool.interceptor.ResetAbandonedTimer"
+				username="root" 
+				password="root"
+				driverClassName="com.mysql.jdbc.Driver"
+				url="jdbc:mysql://localhost:3306/agritech"
+				/>
+</Context>
